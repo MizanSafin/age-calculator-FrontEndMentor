@@ -170,10 +170,10 @@ body {
         padding: 2rem;
     }
     .inputs-wrapper{
-        gap: .5rem;
+        gap: .4rem;
     } 
      .input-box input{
-        width: 60px;
+        width: 75px;
     }
     .btn{
         top: 118px;

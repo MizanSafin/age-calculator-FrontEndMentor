@@ -33,17 +33,17 @@ function validateInputValue() {
     errorYear.classList.add("show")
     changeBtnPosition = true
   }
-  if (Number(day.value) <= 0 || Number(day.value) > 31) {
+  if ((day.value && Number(day.value) <= 0) || Number(day.value) > 31) {
     errorDay.classList.add("show")
     errorDay.innerHTML = `Must be a valid day`
     changeBtnPosition = true
   }
-  if (Number(month.value) <= 0 || Number(month.value) > 12) {
+  if ((month.value && Number(month.value) <= 0) || Number(month.value) > 12) {
     errorMonth.classList.add("show")
     errorMonth.innerHTML = `Must be a valid month`
     changeBtnPosition = true
   }
-  if (Number(year.value) <= 0 || Number(year.value) > yearNow) {
+  if ((year.value && Number(year.value) <= 0) || Number(year.value) > yearNow) {
     errorYear.classList.add("show")
     errorYear.innerHTML = `Must be in the past`
     changeBtnPosition = true
@@ -52,7 +52,7 @@ function validateInputValue() {
 
 btnEl.addEventListener("click", () => {
   validateInputValue()
-//   console.log(changeBtnPosition)
+  //   console.log(changeBtnPosition)
   if (changeBtnPosition) {
     btnEl.style.cssText = `margin-top:30px`
     changeColor()
