@@ -93,9 +93,13 @@ function showOutput() {
 }
 
 function showBirthDate(year, month, day) {
-  outputYear.innerText = `${year} ${year > 1 ? "years" : "year"}`
-  outputMonth.innerText = `${month} ${month > 1 ? "months" : "month"}`
-  outputDay.innerText = `${day} ${day > 1 ? "days" : "day"}`
+  outputYear.innerHTML = `<h1> <span>${year}</span> ${year > 1 ? "years" : "year"} </h1>`
+  outputMonth.innerHTML = `<h1><span>${month}</span> ${
+    month > 1 ? "months" : "month"
+  } </h1>`
+  outputDay.innerHTML = `<h1><span>${day}</span> ${
+    day > 1 ? "days" : "day"
+  } </h1>`
 }
 
 function clearBirthDate() {
